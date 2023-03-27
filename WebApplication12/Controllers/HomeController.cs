@@ -8,9 +8,13 @@ namespace WebApplication12.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+
+
+        private ICancellationTokenSourceProvider _cancellationTokenSourceProvider;
+        public HomeController(ILogger<HomeController> logger, ICancellationTokenSourceProvider cancellationTokenSourceProvider)
         {
             _logger = logger;
+            _cancellationTokenSourceProvider = cancellationTokenSourceProvider;
         }
 
         public IActionResult Index()

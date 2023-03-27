@@ -19,6 +19,9 @@ namespace WebApplication12.Controllers
             _context = context;
         }
 
+
+
+
         // GET: Pets
         public async Task<IActionResult> Index()
         {
